@@ -3,6 +3,8 @@ package com.example.myboot.controller;
 import com.example.myboot.pojo.Result;
 import com.example.myboot.pojo.ValidateUser;
 import com.example.myboot.util.ResultUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.validation.annotation.Validated;
@@ -22,6 +24,8 @@ import static com.example.myboot.pojo.ResultEnum.SUCCESS;
 @RestController
 public class HelloController {
 
+    public static final Logger logger =  LoggerFactory.getLogger(HelloController.class);
+
     @GetMapping(value = "/hello")
     public Result hello() {
         return ResultUtil.success("hello-world");
@@ -39,5 +43,14 @@ public class HelloController {
             return ResultUtil.error(errorMes);
         }
         return ResultUtil.success(SUCCESS);
+    }
+
+    @GetMapping("/log")
+    public void logTest() {
+        logger.trace("跟踪日志");
+        logger.debug("调试日志");
+        logger.info("一般日志");
+        logger.warn("警告日志");
+        logger.error("错误日志");
     }
 }
