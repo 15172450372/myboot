@@ -1,4 +1,8 @@
-package com.example.myboot.pojo;
+package com.example.myboot.util;
+
+import com.example.myboot.pojo.Result;
+import com.example.myboot.pojo.ResultEnum;
+
 
 /**
  * @Author: zhouwei
@@ -25,6 +29,12 @@ public class ResultUtil {
         return result;
     }
 
+    public static Result<Object> error(Object object) {
+        Result<Object> result = error(ResultEnum.PARAMETER_ERROR);
+        result.setData(object);
+        return result;
+    }
+
     public static Result<Object> error(Integer code, String msg) {
         Result<Object> result = new Result<>();
         result.setCode(code);
@@ -38,5 +48,6 @@ public class ResultUtil {
         result.setMessage(resultEnum.getMessage());
         return result;
     }
+
 
 }

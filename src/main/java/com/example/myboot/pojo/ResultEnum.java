@@ -12,7 +12,8 @@ public enum ResultEnum {
 
     SUCCESS(1,"成功"),
     FAILURE(0,"失败"),
-    UNKNOW_ERROR(-1,"未知错误");
+    UNKNOW_ERROR(-1,"未知错误"),
+    PARAMETER_ERROR(400,"参数错误");
 
     private Integer code;
     private String message;
