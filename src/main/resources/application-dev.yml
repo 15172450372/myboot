@@ -1,2 +1,6 @@
 server:
   port: 8080
+
+logging:
+  level:
+    org.springframework.boot.autoconfigure: error  #去除 CONDITIONS EVALUATION REPORT 日志信息
