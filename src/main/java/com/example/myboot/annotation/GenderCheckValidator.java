@@ -1,4 +1,4 @@
-package com.example.myboot.config;
+package com.example.myboot.annotation;
 
 import com.example.myboot.annotation.GenderCheck;
 import org.springframework.util.StringUtils;

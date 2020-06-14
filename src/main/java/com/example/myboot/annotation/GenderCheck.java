@@ -1,7 +1,5 @@
 package com.example.myboot.annotation;
 
-import com.example.myboot.config.GenderCheckValidator;
-
 import javax.validation.Constraint;
 import javax.validation.Payload;
 import java.lang.annotation.*;
