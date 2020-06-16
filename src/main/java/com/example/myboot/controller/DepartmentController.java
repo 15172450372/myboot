@@ -12,7 +12,7 @@ import static com.example.myboot.pojo.ResultEnum.*;
 
 /**
  * @Author: zhouwei
- * @Description: 操作数据库
+ * @Description: 整合mybatis
  * @Date: 2020/6/14 下午6:57
  * @Version: 1.0
  **/

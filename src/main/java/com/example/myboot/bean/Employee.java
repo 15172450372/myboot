@@ -1,6 +1,8 @@
 package com.example.myboot.bean;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @Author: zhouwei
@@ -9,12 +11,20 @@ import lombok.Data;
  * @Version: 1.0
  **/
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Employee {
 
     private Integer id;
     private String name;
     private String email;
     private String gender;
-    private Integer dId;
+    private Integer did;
 
+    public Employee(String name, String email, String gender, Integer dId) {
+        this.name = name;
+        this.email = email;
+        this.gender = gender;
+        this.did = dId;
+    }
 }

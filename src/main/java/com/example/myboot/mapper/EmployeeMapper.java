@@ -1,10 +1,7 @@
 package com.example.myboot.mapper;
 
 import com.example.myboot.bean.Employee;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
 
 /**
  * @Author: zhouwei
@@ -18,5 +15,11 @@ public interface EmployeeMapper {
     int insertEmployee(Employee employee);
 
     Employee getEmployeeById(Integer id);
+
+    int updateEmployee(Employee employee);
+
+    int deleteEmployeeById(Integer id);
+
+    Employee getEmployeeByName(String name);
 
 }

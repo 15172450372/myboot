@@ -10,4 +10,17 @@
     <insert id="insertEmployee">
         insert into employee(name,email,gender,did) values(#{name},#{email},#{gender},#{dId})
     </insert>
+
+    <update id="updateEmployee">
+        update employee set name = #{name}, email = #{email}, gender = #{gender}, did = #{did}
+        where id = #{id}
+    </update>
+
+    <delete id="deleteEmployeeById">
+        delete from employee where id = #{id}
+    </delete>
+
+    <select id="getEmployeeByName" resultType="com.example.myboot.bean.Employee">
+        select * from employee where name = #{name}
+    </select>
 </mapper>
