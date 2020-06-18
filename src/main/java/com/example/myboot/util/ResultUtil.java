@@ -22,6 +22,13 @@ public class ResultUtil {
         return success(null);
     }
 
+    public static Result<Object> success(Integer code, String msg) {
+        Result<Object> result = new Result<>();
+        result.setCode(200);
+        result.setMessage(msg);
+        return result;
+    }
+
     public static Result<Object> success(ResultEnum resultEnum) {
         Result<Object> result = new Result<>();
         result.setCode(resultEnum.getCode());

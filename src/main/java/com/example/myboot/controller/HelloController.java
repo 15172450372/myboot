@@ -28,7 +28,7 @@ public class HelloController {
 
     @GetMapping(value = "/hello")
     public Result hello() {
-        return ResultUtil.success("hello-world");
+        return ResultUtil.success(200,"hello-world");
     }
 
     /**
