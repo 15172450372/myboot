@@ -5,3 +5,4 @@ spring boot常用组件整合
 2. 首页地址localhost:8080或localhost:8080/index;
 3. Druid数据监控地址： localhost：8080/druid;
 4. 登录地址：localhost:8080/login?username=?&password=?(POST),注销地址：localhost:8080/logout;
+5. chat room online 地址: http://127.0.0.1:8080/webSocketTest.html(关闭security)

@@ -19,7 +19,8 @@ import java.io.PrintWriter;
 @Component
 public class CustomAccessDeniedHandler implements AccessDeniedHandler {
     @Override
-    public void handle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AccessDeniedException e) throws IOException, ServletException {
+    public void handle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse,
+                       AccessDeniedException e) throws IOException, ServletException {
         //HttpServletResponse.SC_FORBIDDEN代表 403
         //response.setStatus(HttpServletResponse.SC_FORBIDDEN);
         httpServletResponse.setHeader("Content-Type","application/json;charset=utf-8");

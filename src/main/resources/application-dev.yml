@@ -8,6 +8,8 @@ logger:
   lever: debug
 
 spring:
+  application:
+    name: myboot
   #数据源
   datasource:
     username: root
