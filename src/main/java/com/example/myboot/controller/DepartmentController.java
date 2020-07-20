@@ -1,7 +1,7 @@
 package com.example.myboot.controller;
 
-import com.example.myboot.bean.Department;
-import com.example.myboot.mapper.DepartmentMapper;
+import com.example.myboot.domain.DepartmentDO;
+import com.example.myboot.domain.mapper.DepartmentMapper;
 import com.example.myboot.pojo.Result;
 import com.example.myboot.util.ResultUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +25,7 @@ public class DepartmentController {
 
     @PostMapping
     public Result insertDepartment(@RequestParam(value = "name", required = true) String name) {
-        Department department = new Department();
+        DepartmentDO department = new DepartmentDO();
         department.setName(name);
         int resultCount = departmentMapper.insertDepartment(department);
         if (resultCount > 0) {
@@ -42,7 +42,7 @@ public class DepartmentController {
 
     @GetMapping(value = "/{id}")
     public Result getDepartmentById(@PathVariable("id") Integer id) {
-        Department department = departmentMapper.getDepartmentById(id);
+        DepartmentDO department = departmentMapper.getDepartmentById(id);
         return ResultUtil.success(department);
     }
 
@@ -52,7 +52,7 @@ public class DepartmentController {
         if (id < 1 || StringUtils.isEmpty(name)) {
             return ResultUtil.error(PARAMETER_ERROR);
         }
-        departmentMapper.updateDepartment(new Department(id, name));
+        departmentMapper.updateDepartment(new DepartmentDO(id, name));
         return ResultUtil.success(SUCCESS);
     }
 

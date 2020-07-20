@@ -1,6 +1,6 @@
-package com.example.myboot.mapper;
+package com.example.myboot.domain.mapper;
 
-import com.example.myboot.bean.User;
+import com.example.myboot.domain.UserDO;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -12,6 +12,6 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface UserMapper {
 
-    User findByName(String username);
+    UserDO findByName(String username);
 
 }

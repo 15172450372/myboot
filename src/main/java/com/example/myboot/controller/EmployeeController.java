@@ -1,14 +1,12 @@
 package com.example.myboot.controller;
 
-import com.example.myboot.bean.Employee;
-import com.example.myboot.mapper.EmployeeMapper;
+import com.example.myboot.domain.EmployeeDO;
+import com.example.myboot.domain.mapper.EmployeeMapper;
 import com.example.myboot.pojo.Result;
 import com.example.myboot.pojo.ResultEnum;
 import com.example.myboot.util.ResultUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.security.PublicKey;
 
 import static com.example.myboot.pojo.ResultEnum.FAILURE;
 import static com.example.myboot.pojo.ResultEnum.SUCCESS;
@@ -31,12 +29,12 @@ public class EmployeeController {
         if (id < 1) {
             return ResultUtil.error(ResultEnum.PARAMETER_ERROR);
         }
-        Employee employeeById = employeeMapper.getEmployeeById(id);
+        EmployeeDO employeeById = employeeMapper.getEmployeeById(id);
         return ResultUtil.success(employeeById);
     }
 
     @PostMapping
-    public Result insertEmployee(@RequestBody Employee employee) {
+    public Result insertEmployee(@RequestBody EmployeeDO employee) {
         int resultCount = employeeMapper.insertEmployee(employee);
         if (resultCount == 0) {
             ResultUtil.error(FAILURE);

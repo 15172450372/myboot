@@ -1,6 +1,6 @@
-package com.example.myboot.mapper;
+package com.example.myboot.domain.mapper;
 
-import com.example.myboot.bean.Department;
+import com.example.myboot.domain.DepartmentDO;
 import org.apache.ibatis.annotations.*;
 
 /**
@@ -13,15 +13,15 @@ import org.apache.ibatis.annotations.*;
 public interface DepartmentMapper {
 
     @Select("select * from department where id = #{id}")
-    public Department getDepartmentById(Integer id);
+    public DepartmentDO getDepartmentById(Integer id);
 
     @Delete("delete from department where id = #{id}")
     public int deleteDepartmentById(Integer id);
 
     @Insert("insert into department(name) values(#{name})")
-    public int insertDepartment(Department department);
+    public int insertDepartment(DepartmentDO department);
 
     @Update("update department set name = #{name}")
-    public int updateDepartment(Department department);
+    public int updateDepartment(DepartmentDO department);
 
 }

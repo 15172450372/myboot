@@ -2,8 +2,8 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.myboot.mapper.EmployeeMapper">
-    <select id="getEmployeeById" resultType="com.example.myboot.bean.Employee">
+<mapper namespace="com.example.myboot.domain.mapper.EmployeeMapper">
+    <select id="getEmployeeById" resultType="com.example.myboot.domain.EmployeeDO">
         select * from employee where id = #{id}
     </select>
 
@@ -20,7 +20,7 @@
         delete from employee where id = #{id}
     </delete>
 
-    <select id="getEmployeeByName" resultType="com.example.myboot.bean.Employee">
+    <select id="getEmployeeByName" resultType="com.example.myboot.domain.EmployeeDO">
         select * from employee where name = #{name}
     </select>
 </mapper>

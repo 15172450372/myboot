@@ -1,8 +1,8 @@
 package com.example.myboot.service;
 
-import com.example.myboot.bean.Permission;
-import com.example.myboot.bean.Role;
-import com.example.myboot.mapper.PermissionMapper;
+import com.example.myboot.domain.PermissionDO;
+import com.example.myboot.domain.RoleDO;
+import com.example.myboot.domain.mapper.PermissionMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,10 +20,10 @@ public class PermissionService {
     @Autowired
     private PermissionMapper permissionMapper;
 
-    public List<Permission> selectListByUserId(Integer id){
+    public List<PermissionDO> selectListByUserId(Integer id){
         return permissionMapper.selectListByUserId(id);
     }
-    public List<Role> selectRoleListByUserId(Integer id){
+    public List<RoleDO> selectRoleListByUserId(Integer id){
         return permissionMapper.selectRoleListByUserId(id);
     }
 

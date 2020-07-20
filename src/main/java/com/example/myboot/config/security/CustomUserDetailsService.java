@@ -1,8 +1,8 @@
 package com.example.myboot.config.security;
 
-import com.example.myboot.bean.Permission;
-import com.example.myboot.bean.Role;
-import com.example.myboot.bean.User;
+import com.example.myboot.domain.PermissionDO;
+import com.example.myboot.domain.RoleDO;
+import com.example.myboot.domain.UserDO;
 import com.example.myboot.service.PermissionService;
 import com.example.myboot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +40,7 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         //根据用户输入的用户信息，查询数据库中已注册用户信息
-        User user = userService.findByName(s);
+        UserDO user = userService.findByName(s);
         //如果用户不存在直接抛出UsernameNotFoundException异常
         if (user == null) {
             throw new UsernameNotFoundException("用户不存在");
@@ -49,9 +49,9 @@ public class CustomUserDetailsService implements UserDetailsService {
         //声明一个用于存放用户权限的列表
         List<GrantedAuthority> grantedAuthorities = new ArrayList<>();
         //获取该用户所拥有的权限
-        List<Permission> authority = permissionService.selectListByUserId(user.getId());
+        List<PermissionDO> authority = permissionService.selectListByUserId(user.getId());
         //获取该用户所属角色
-        List<Role> role = permissionService.selectRoleListByUserId(user.getId());
+        List<RoleDO> role = permissionService.selectRoleListByUserId(user.getId());
         //把用户所拥有的权限添加到列表中
         authority.forEach(permission -> {
             grantedAuthorities.add(new SimpleGrantedAuthority(permission.getAuthority()));

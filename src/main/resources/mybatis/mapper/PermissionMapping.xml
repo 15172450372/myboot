@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.myboot.mapper.PermissionMapper">
+<mapper namespace="com.example.myboot.domain.mapper.PermissionMapper">
     <!-- 根据用户id查询用户所有的权限-->
-    <select id="selectListByUserId" resultType="com.example.myboot.bean.Permission">
+    <select id="selectListByUserId" resultType="com.example.myboot.domain.PermissionDO">
         SELECT
 p.authority
 FROM
@@ -15,7 +15,7 @@ WHERE u.id = #{id}
     </select>
 
     <!-- 根据用户id查询用户属于什么角色-->
-    <select id="selectRoleListByUserId" resultType="com.example.myboot.bean.Role">
+    <select id="selectRoleListByUserId" resultType="com.example.myboot.domain.RoleDO">
         SELECT
 r.role_name
 FROM

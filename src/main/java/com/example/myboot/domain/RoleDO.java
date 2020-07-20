@@ -1,4 +1,4 @@
-package com.example.myboot.bean;
+package com.example.myboot.domain;
 
 import lombok.Data;
 
@@ -9,7 +9,7 @@ import lombok.Data;
  * @Version: 1.0
  **/
 @Data
-public class Role {
+public class RoleDO {
 
     private Integer id;
     private String roleName;

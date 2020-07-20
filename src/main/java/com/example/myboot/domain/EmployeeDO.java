@@ -1,4 +1,4 @@
-package com.example.myboot.bean;
+package com.example.myboot.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,7 +15,7 @@ import java.io.Serializable;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Employee implements Serializable {
+public class EmployeeDO implements Serializable {
 
     private Integer id;
     private String name;
@@ -23,7 +23,7 @@ public class Employee implements Serializable {
     private String gender;
     private Integer did;
 
-    public Employee(String name, String email, String gender, Integer dId) {
+    public EmployeeDO(String name, String email, String gender, Integer dId) {
         this.name = name;
         this.email = email;
         this.gender = gender;
