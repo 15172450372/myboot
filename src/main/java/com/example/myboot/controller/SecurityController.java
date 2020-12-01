@@ -1,14 +1,12 @@
 package com.example.myboot.controller;
 
-import com.example.myboot.pojo.Result;
+import com.example.myboot.beans.Result;
 import com.example.myboot.service.UserService;
 import com.example.myboot.util.ResultUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 /**

@@ -2,13 +2,13 @@ package com.example.myboot.controller;
 
 import com.example.myboot.domain.DepartmentDO;
 import com.example.myboot.domain.mapper.DepartmentMapper;
-import com.example.myboot.pojo.Result;
+import com.example.myboot.beans.Result;
 import com.example.myboot.util.ResultUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
-import static com.example.myboot.pojo.ResultEnum.*;
+import static com.example.myboot.beans.ResultEnum.*;
 
 /**
  * @Author: zhouwei

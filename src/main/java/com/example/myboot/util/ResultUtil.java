@@ -1,7 +1,7 @@
 package com.example.myboot.util;
 
-import com.example.myboot.pojo.Result;
-import com.example.myboot.pojo.ResultEnum;
+import com.example.myboot.beans.Result;
+import com.example.myboot.beans.ResultEnum;
 
 
 /**

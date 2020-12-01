@@ -1,6 +1,6 @@
 package com.example.myboot.controller;
 
-import com.example.myboot.pojo.Result;
+import com.example.myboot.beans.Result;
 import com.example.myboot.util.RedisUtil;
 import com.example.myboot.util.ResultUtil;
 import org.springframework.beans.factory.annotation.Autowired;

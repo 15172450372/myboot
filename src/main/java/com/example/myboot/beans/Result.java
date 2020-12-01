@@ -1,4 +1,4 @@
-package com.example.myboot.pojo;
+package com.example.myboot.beans;
 
 import lombok.Data;
 

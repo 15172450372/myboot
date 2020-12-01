@@ -1,4 +1,4 @@
-package com.example.myboot.pojo;
+package com.example.myboot.beans;
 
 import com.example.myboot.annotation.NumberContains;
 import lombok.Data;

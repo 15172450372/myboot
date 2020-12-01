@@ -1,16 +1,15 @@
 package com.example.myboot.controller;
 
-import com.example.myboot.pojo.Result;
-import com.example.myboot.pojo.ValidateUser;
+import com.example.myboot.beans.Result;
+import com.example.myboot.beans.ValidateUser;
 import com.example.myboot.util.ResultUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.ObjectError;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import static com.example.myboot.pojo.ResultEnum.SUCCESS;
+import static com.example.myboot.beans.ResultEnum.SUCCESS;
 
 /**
  * @Author: zhouwei

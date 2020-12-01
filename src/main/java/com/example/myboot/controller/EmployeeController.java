@@ -2,14 +2,14 @@ package com.example.myboot.controller;
 
 import com.example.myboot.domain.EmployeeDO;
 import com.example.myboot.domain.mapper.EmployeeMapper;
-import com.example.myboot.pojo.Result;
-import com.example.myboot.pojo.ResultEnum;
+import com.example.myboot.beans.Result;
+import com.example.myboot.beans.ResultEnum;
 import com.example.myboot.util.ResultUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import static com.example.myboot.pojo.ResultEnum.FAILURE;
-import static com.example.myboot.pojo.ResultEnum.SUCCESS;
+import static com.example.myboot.beans.ResultEnum.FAILURE;
+import static com.example.myboot.beans.ResultEnum.SUCCESS;
 
 /**
  * @Author: zhouwei
