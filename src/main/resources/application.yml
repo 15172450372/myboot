@@ -1,3 +1,19 @@
+server:
+  shutdown: graceful
+
 spring:
   profiles:
     active: dev
+
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
+
+#management:
+#  endpoint:
+#    shutdown:
+#      enabled: true #启用 Shutdown Endpoint
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#      base-path: /MyActuator # 自定义管理端点的前缀(保证安全)

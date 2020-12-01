@@ -8,10 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import static com.example.myboot.pojo.ResultEnum.SUCCESS;
 
@@ -52,5 +49,13 @@ public class HelloController {
         logger.info("一般日志");
         logger.warn("警告日志");
         logger.error("错误日志");
+    }
+
+    @RequestMapping("/working")
+    public String work() throws InterruptedException {
+        System.out.println("业务开始。。。。。。。。。。。");
+        Thread.sleep(10000);
+        System.out.println("业务结束。。。。。。。。。。。");
+        return "success";
     }
 }

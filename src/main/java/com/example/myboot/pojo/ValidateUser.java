@@ -1,6 +1,6 @@
 package com.example.myboot.pojo;
 
-import com.example.myboot.annotation.GenderCheck;
+import com.example.myboot.annotation.NumberContains;
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 
@@ -32,8 +32,8 @@ public class ValidateUser {
     /**
      * 性别 0:male 1:female
      */
-    @GenderCheck(genderList = {"male","female"}, message = "性别只允许为male或female")
-    private String sex;
+    @NumberContains(value = {0, 1}, message = "性别只允许为1-male;2-female")
+    private int sex;
     /**
      * 年龄
      */

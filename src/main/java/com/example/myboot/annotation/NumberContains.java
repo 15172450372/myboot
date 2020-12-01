@@ -1,6 +1,6 @@
 package com.example.myboot.annotation;
 
-import com.example.myboot.config.GenderCheckValidator;
+import com.example.myboot.config.NumberContainsValidator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
@@ -12,8 +12,8 @@ import java.lang.annotation.*;
 @Target({ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Constraint(validatedBy = GenderCheckValidator.class)
-public @interface GenderCheck {
+@Constraint(validatedBy = NumberContainsValidator.class)
+public @interface NumberContains {
 
     String message() default "";
 
@@ -21,6 +21,6 @@ public @interface GenderCheck {
 
     Class<? extends Payload>[] payload() default {};
 
-    String[] genderList() default {};
+    int[] value() default {};
 
 }

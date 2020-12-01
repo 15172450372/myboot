@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8090
 
 #logging:
 #  level:
@@ -11,17 +11,17 @@ spring:
   application:
     name: myboot
   #数据源
-  datasource:
-    username: root
-    password: root
-    url: jdbc:mysql://127.0.0.1:3306/myboot?useUnicode=true&characterEncoding=utf-8&useSSL=false
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    type: com.alibaba.druid.pool.DruidDataSource
-    initialSize: 5 #连接池建立时创建的初始化连接数
-    minIdle: 5 #连接池中最小空闲连接数
-    maxActive: 20 #连接池中最大的活跃连接数
-    filters: stat,wall
-    maxPoolPreparedStatementPerConnectionSize: 20
+#  datasource:
+#    username: root
+#    password: root
+#    url: jdbc:mysql://127.0.0.1:3306/myboot?useUnicode=true&characterEncoding=utf-8&useSSL=false
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    initialSize: 5 #连接池建立时创建的初始化连接数
+#    minIdle: 5 #连接池中最小空闲连接数
+#    maxActive: 20 #连接池中最大的活跃连接数
+#    filters: stat,wall
+#    maxPoolPreparedStatementPerConnectionSize: 20
 
   redis:
     host: 127.0.0.1

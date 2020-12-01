@@ -28,7 +28,7 @@ public class WechatController {
     private static final String TOKEN = "wxtoken";
     private static final String APP_ID = "wxd2feff8a66e901de";
     private static final String APP_SECURITY = "9442c3805ad4d4807ee0ce2bda03bb7f";
-    //内网地址
+    //内网穿透地址
     private static final String REDIRECT_URI = "http://fxdhdp.natappfree.cc/";
 
 
